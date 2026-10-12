@@ -20,11 +20,31 @@ const translations = {
   }
 };
 
+const skillTranslations = {
+  en: {
+    htmlCssTitle: 'HTML5 &amp; CSS3', htmlCssText: 'Page structure, styling and responsive design.', fundamentals: 'Fundamentals', responsive: 'Responsive',
+    javascriptTitle: 'JavaScript', javascriptText: 'Programming basics and web interactions.', learning: 'Learning', dom: 'DOM',
+    pythonTitle: 'Python', pythonText: 'Algorithmic logic and basic programming.', basics: 'Basics',
+    sqlTitle: 'SQL &amp; Databases', sqlText: 'Introduction to databases and SQL queries.', queries: 'Queries',
+    githubTitle: 'GitHub Pages', githubText: 'Hosting and publishing portfolio websites.', practical: 'Practical', hosting: 'Hosting'
+  },
+  ar: {
+    htmlCssTitle: 'HTML5 &amp; CSS3', htmlCssText: '\u0647\u064a\u0643\u0644 \u0627\u0644\u0635\u0641\u062d\u0627\u062a\u060c \u0627\u0644\u062a\u0646\u0633\u064a\u0642 \u0648\u0627\u0644\u062a\u0635\u0645\u064a\u0645 \u0627\u0644\u0645\u062a\u062c\u0627\u0648\u0628.', fundamentals: '\u0627\u0644\u0623\u0633\u0627\u0633\u064a\u0627\u062a', responsive: '\u0645\u062a\u062c\u0627\u0648\u0628',
+    javascriptTitle: 'JavaScript', javascriptText: '\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u0627\u0644\u0628\u0631\u0645\u062c\u0629 \u0648\u062a\u0641\u0627\u0639\u0644\u0627\u062a \u0627\u0644\u0648\u064a\u0628.', learning: '\u0641\u064a \u0637\u0648\u0631 \u0627\u0644\u062a\u0639\u0644\u0645', dom: 'DOM',
+    pythonTitle: 'Python', pythonText: '\u0627\u0644\u0645\u0646\u0637\u0642 \u0627\u0644\u062e\u0648\u0627\u0631\u0632\u0645\u064a \u0648\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u0627\u0644\u0628\u0631\u0645\u062c\u0629.', basics: '\u0627\u0644\u0623\u0633\u0627\u0633\u064a\u0627\u062a',
+    sqlTitle: 'SQL \u0648\u0642\u0648\u0627\u0639\u062f \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a', sqlText: '\u0645\u0642\u062f\u0645\u0629 \u0641\u064a \u0642\u0648\u0627\u0639\u062f \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a \u0648\u0627\u0633\u062a\u0639\u0644\u0627\u0645\u0627\u062a SQL.', queries: '\u0627\u0633\u062a\u0639\u0644\u0627\u0645\u0627\u062a',
+    githubTitle: 'GitHub Pages', githubText: '\u0627\u0633\u062a\u0636\u0627\u0641\u0629 \u0648\u0646\u0634\u0631 \u0645\u0648\u0627\u0642\u0639 \u0627\u0644\u0628\u0648\u0631\u062a\u0641\u0648\u0644\u064a\u0648.', practical: '\u062a\u0637\u0628\u064a\u0642\u064a', hosting: '\u0627\u0633\u062a\u0636\u0627\u0641\u0629'
+  }
+};
+
 function setLanguage(language) {
   document.documentElement.lang = language;
   document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
   document.querySelectorAll('[data-i18n]').forEach((element) => {
     element.innerHTML = translations[language][element.dataset.i18n];
+  });
+  document.querySelectorAll('[data-skill-i18n]').forEach((element) => {
+    element.innerHTML = skillTranslations[language][element.dataset.skillI18n];
   });
   languageToggle.textContent = language === 'ar' ? 'EN' : 'ع';
   languageToggle.setAttribute('aria-label', language === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
