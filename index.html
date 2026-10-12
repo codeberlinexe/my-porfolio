@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio of Amine Nefati, web development student." />
+    <title>Amine Nefati — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="header">
+      <a href="#accueil" class="logo" aria-label="Back to home">M<span>.</span></a>
+      <button class="menu-button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="active" href="#accueil" data-i18n="navHome">Home</a>
+        <a href="#apropos" data-i18n="navAbout">About</a>
+        <a href="#competences" data-i18n="navSkills">Skills</a>
+        <a href="#projets" data-i18n="navProjects">Projects</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="language-toggle" aria-label="Change language">ع</button>
+        <button class="theme-toggle" aria-label="Change theme" title="Change theme">
+        <span class="theme-icon">☼</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="accueil">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> <span data-i18n="available">Available for new projects</span></p>
+          <h1 data-i18n="heroTitle">I create <em>digital</em> experiences that matter.</h1>
+          <p class="intro" data-i18n="intro">Hello, I am <strong>Amine Nefati</strong> — a web development student based in Morocco.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projets"><span data-i18n="viewProjects">View my projects</span> <span>↗</span></a>
+            <a class="button text-button" href="#contact"><span data-i18n="contactMe">Contact me</span> <span>↓</span></a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="code-card">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <p><b>const</b> passion = <span>'code'</span>;</p>
+            <p><b>const</b> goal = <span>'create'</span>;</p>
+            <p class="cursor">_</p>
+          </div>
+          <div class="floating-tag tag-one">&lt;/&gt; HTML</div>
+          <div class="floating-tag tag-two">✦ <span data-i18n="creative">creative</span></div>
+        </div>
+        <a class="scroll-hint" href="#apropos"><span data-i18n="scroll">Scroll</span> <span></span></a>
+      </section>
+
+      <section class="about section" id="apropos">
+        <div class="section-label">01 <span></span> <span data-i18n="aboutLabel">ABOUT</span></div>
+        <div class="about-grid">
+          <h2 data-i18n="aboutTitle">Curious by nature.<br /><em>Creative</em> by choice.</h2>
+          <div class="about-content">
+            <p data-i18n="aboutText1">I am a student passionate about web development and creating simple, useful and enjoyable digital products.</p>
+            <p data-i18n="aboutText2">Every project is a chance to learn, experiment and turn an idea into a real experience.</p>
+            <div class="facts">
+              <div><small data-i18n="location">LOCATION</small><strong data-i18n="morocco">Morocco 🇲🇦</strong></div>
+              <div><small data-i18n="education">EDUCATION</small><strong data-i18n="webDev">Web Development</strong></div>
+              <div><small data-i18n="status">STATUS</small><strong data-i18n="beginner">Beginner · Learning</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills section" id="competences">
+        <div class="section-label">02 <span></span> <span data-i18n="skillsLabel">SKILLS</span></div>
+        <h2 data-i18n="skillsTitle">What I am currently<br /><em>learning.</em></h2>
+        <div class="skills-grid">
+          <article class="skill-card"><div class="skill-number">01</div><div class="skill-icon">&lt;/&gt;</div><h3>HTML</h3><p data-i18n="htmlText">I build the structure of web pages and learn the right tags.</p><div class="chips"><span data-i18n="structure">Structure</span><span data-i18n="tags">Tags</span><span data-i18n="forms">Forms</span></div></article>
+          <article class="skill-card"><div class="skill-number">02</div><div class="skill-icon">#</div><h3>CSS</h3><p data-i18n="cssText">I am learning colours, spacing and responsive layouts.</p><div class="chips"><span data-i18n="colours">Colours</span><span>Flexbox</span><span>Responsive</span></div></article>
+          <article class="skill-card"><div class="skill-number">03</div><div class="skill-icon">{ }</div><h3>JavaScript</h3><p data-i18n="jsText">I am starting to add simple interactions to my web pages.</p><div class="chips"><span data-i18n="variables">Variables</span><span data-i18n="conditions">Conditions</span><span>DOM</span></div></article>
+        </div>
+      </section>
+
+      <section class="projects section" id="projets">
+        <div class="projects-top"><div class="section-label">03 <span></span> <span data-i18n="projectsLabel">PROJECTS</span></div><a class="all-projects" href="#contact"><span data-i18n="allProjects">All projects</span> <span>↗</span></a></div>
+        <h2 data-i18n="projectsTitle">A few selected<br /><em>works.</em></h2>
+        <div class="project-list">
+          <a class="project project-one" href="#contact"><div class="project-visual"><span class="visual-label">01 — WEB DESIGN</span><div class="mock-window"><i></i><i></i><i></i><b>studio.</b><p>Make your<br /><em>mark.</em></p></div></div><div class="project-info"><div><h3>Creative Studio</h3><p data-i18n="studioText">Landing page for a creative agency</p></div><span>↗</span></div></a>
+          <a class="project project-two" href="#contact"><div class="project-visual"><span class="visual-label">02 — APP</span><div class="phone-mock"><div class="phone-bar"></div><b data-i18n="hello">Hello, Adam 👋</b><small data-i18n="expenses">Your spending this month</small><strong>2 450,00 <em>DH</em></strong><div class="chart"><i></i><i></i><i></i><i></i><i></i></div></div></div><div class="project-info"><div><h3>Budgetly</h3><p data-i18n="budgetText">Budget management application</p></div><span>↗</span></div></a>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="section-label">04 <span></span> <span data-i18n="contactLabel">CONTACT</span></div>
+        <div class="contact-inner"><p class="eyebrow" data-i18n="contactEyebrow">AN IDEA, A PROJECT?</p><h2 data-i18n="contactTitle">Let's talk<br /><em>together.</em></h2><a class="email-link" data-i18n="contactAction" href="https://www.instagram.com/codeberlin.exe?xtok=MWJqNTBwNGcwYm56OQ==" target="_blank" rel="noopener noreferrer">Message me on Instagram <span>↗</span></a></div>
+        <div class="contact-footer"><p>© <span id="year"></span> Amine Nefati. <span data-i18n="madeWith">Made with passion.</span></p><div><a href="#">LinkedIn</a><a href="#">GitHub</a><a href="https://www.instagram.com/codeberlin.exe?xtok=MWJqNTBwNGcwYm56OQ==" target="_blank" rel="noopener noreferrer">Instagram</a></div></div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
